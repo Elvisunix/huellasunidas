@@ -1,7 +1,11 @@
 const citaForm = document.getElementById('cita-form');
 const citasContainer = document.getElementById('citas-container');
+const searchForm = document.getElementById('search-form');
+const searchInput = document.getElementById('search-input');
+const dogProfileForm = document.getElementById('dog-profile-form');
 
 let citas = [];
+let dogProfile = {};
 
 citaForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -23,9 +27,31 @@ citaForm.addEventListener('submit', (e) => {
     citaForm.reset();
 });
 
-function renderCitas() {
+dogProfileForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    dogProfile.breed = document.getElementById('dog-breed').value;
+    dogProfile.age = document.getElementById('dog-age').value;
+    dogProfile.size = document.getElementById('dog-size').value;
+    dogProfile.personality = document.getElementById('dog-personality').value;
+
+    alert('¡Perfil del perro guardado con éxito!');
+});
+
+searchForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const searchTerm = searchInput.value.toLowerCase();
+    const filteredCitas = citas.filter(cita => 
+        cita.dogName.toLowerCase().includes(searchTerm) ||
+        cita.ownerName.toLowerCase().includes(searchTerm) ||
+        cita.location.toLowerCase().includes(searchTerm)
+    );
+    renderCitas(filteredCitas);
+});
+
+function renderCitas(citasToRender = citas) {
     citasContainer.innerHTML = '';
-    citas.forEach((cita) => {
+    citasToRender.forEach((cita) => {
         const citaDiv = document.createElement('div');
         citaDiv.classList.add('cita');
         citaDiv.innerHTML = `

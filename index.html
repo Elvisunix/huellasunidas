@@ -37,6 +37,39 @@
             </form>
         </section>
 
+        <section id="dog-profile-section">
+            <h2>Perfil de tu Perro</h2>
+            <form id="dog-profile-form">
+                <label for="dog-breed">Raza:</label>
+                <input type="text" id="dog-breed">
+
+                <label for="dog-age">Edad:</label>
+                <input type="number" id="dog-age">
+
+                <label for="dog-size">Tamaño:</label>
+                <select id="dog-size">
+                    <option value="">Selecciona el tamaño</option>
+                    <option value="Pequeño">Pequeño</option>
+                    <option value="Mediano">Mediano</option>
+                    <option value="Grande">Grande</option>
+                </select>
+
+                <label for="dog-personality">Personalidad:</label>
+                <textarea id="dog-personality" rows="4"></textarea>
+
+                <button type="submit">Guardar Perfil</button>
+            </form>
+        </section>
+
+        <section id="search-section">
+            <h2>Buscar Cita</h2>
+            <form id="search-form">
+                <label for="search-input">Buscar por nombre de perro, dueño o lugar:</label>
+                <input type="text" id="search-input">
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+
         <section id="citas-section">
             <h2>Próximas Citas</h2>
             <div id="citas-container"></div>

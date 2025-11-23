@@ -14,7 +14,7 @@ main {
     padding: 1rem;
 }
 
-#form-section {
+#form-section, #dog-profile-section, #search-section {
     margin-bottom: 2rem;
 }
 
@@ -29,7 +29,8 @@ label {
 }
 
 input,
-select {
+select,
+textarea {
     padding: 0.5rem;
 }
 

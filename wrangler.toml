@@ -1,5 +1,2 @@
-name = "dog-appointment-scheduler"
-compatibility_date = "2025-11-23"
-
-[site]
-bucket = "."
+# wrangler.toml
+name = 'huellasunidas'

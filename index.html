@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huellas Unidas - Citas Caninas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Huellas Unidas</h1>
+        <p>Encuentra citas para tu perro en tu ciudad</p>
+    </header>
+
+    <main>
+        <section id="form-section">
+            <h2>Crear una nueva cita</h2>
+            <form id="cita-form">
+                <label for="dog-name">Nombre del perro:</label>
+                <input type="text" id="dog-name" required>
+
+                <label for="owner-name">Nombre del dueño:</label>
+                <input type="text" id="owner-name" required>
+
+                <label for="location">Lugar:</label>
+                <select id="location" required>
+                    <option value="">Selecciona un lugar</option>
+                    <option value="Parque Central">Parque Central</option>
+                    <option value="Parque del Norte">Parque del Norte</option>
+                    <option value="Plaza de la Ciudad">Plaza de la Ciudad</option>
+                </select>
+
+                <label for="datetime">Fecha y hora:</label>
+                <input type="datetime-local" id="datetime" required>
+
+                <button type="submit">Crear Cita</button>
+            </form>
+        </section>
+
+        <section id="citas-section">
+            <h2>Próximas Citas</h2>
+            <div id="citas-container"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
